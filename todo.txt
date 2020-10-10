@@ -1,5 +1,5 @@
 todo list for this project
 (< : completed)
 
-- first HTML page with propper layout
+- first HTML page with propper layout <
 
