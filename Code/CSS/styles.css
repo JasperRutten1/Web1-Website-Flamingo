@@ -8,9 +8,13 @@ header {
     text-align: center;
 }
 
+header nav{
+    padding: 0 5px;
+}
+
 header nav ul, header ul{
     list-style: none;
-    padding: 0 5px;
+    padding: 0;
 }
 
 header nav ul li, header ul li{
@@ -28,6 +32,12 @@ header nav ul li a{
 header nav ul li + li a{
     background: lightpink;
     padding: 5px 0;
+    transition: background-color 0.5s;
+}
+
+header nav ul li + li a:hover{
+    background: deeppink;
+    color: white;
 }
 
 header ul li a{
@@ -38,5 +48,25 @@ header ul li a{
 header nav ul li a img{
     max-width: 50%;
     margin: 0 auto 0 auto;
+}
+
+@media all and (min-width: 960px) {
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    header nav ul li{
+        width: 100%;
+        height: 100%;
+    }
+
+    header nav ul li + li a{
+        padding: 10px 0;
+        height: 100%;
+    }
 }
 
