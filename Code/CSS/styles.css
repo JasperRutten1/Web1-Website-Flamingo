@@ -25,7 +25,7 @@ header nav ul li a{
     color: black;
 }
 
-header nav ul li:not(#logo-link) a{
+header nav ul li + li a{
     background: lightpink;
     padding: 5px 0;
 }
