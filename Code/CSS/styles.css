@@ -18,7 +18,7 @@ body{
     text-align: center;
     width: 100%;
     display: block;
-    background: #c5dfa6;
+    background: #dec4aa;
 }
 
 /*header*/
@@ -59,7 +59,7 @@ header ul#langSwitch{
     justify-content: space-between;
     border: #f5a02a solid 1px;
     border-radius: 5px;
-    width: 5rem;
+    width: 10rem;
     height: 1.5rem;
     right: 1.5rem;
     top: 10px;
@@ -83,21 +83,17 @@ header ul#langSwitch li:first-child a{
     border-radius: 5px 0 0 5px;
 }
 
-header ul#langSwitch li:nth-child(2) a{
+header ul#langSwitch li~li a{
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+header ul#langSwitch li:last-child a{
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     border-radius: 0 5px 5px 0;
 }
 
 header ul#langSwitch li a#lang-selected{
     background: #f5a02a;
-}
-
-article section{
-    display: block;
-    margin-bottom: 2rem;
-    padding: 2rem 2rem;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-    background: #e3d4bd;
 }
 
 /*footer*/
@@ -108,6 +104,7 @@ footer ul{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1rem;
+    font-size: 1.3rem;
 }
 
 /*home*/
@@ -134,11 +131,28 @@ div#achtergrond-afbeelding h2{
     color: white;
 }
 
+article.home section{
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 2.5rem 2rem;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
+    background: #c5dfa6;
+}
+
+article.home section h3{
+    font-size: 2rem;
+}
+
+article.home section p{
+    font-size: 1.3rem;
+}
+
 /*reeks*/
 
 main article#reeks-article{
     padding: 0.3rem 0;
     background: #e3d4bd;
+    margin-bottom: 1rem;
 }
 
 main article#reeks-article section{
@@ -193,11 +207,94 @@ div#showing-info dl dd{
     text-align: start;
 }
 
+/*contact*/
+
+article.contact{
+   margin: 1rem 5%;
+}
+
+article.contact h2, article.contact h3{
+    margin: 1.3rem;
+}
+
+article.contact section{
+    margin: 2rem 1rem;
+}
+
+article.contact section p{
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+}
+
+article.contact dl{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 0.4rem;
+}
+
+article.contact dl dt{
+    text-align: right;
+}
+
+article.contact dl dd{
+    text-align: left;
+}
+
+article.contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+article.contact form div.field{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 0.4rem ;
+    margin: 1rem 0;
+}
+
+article.contact form div.field label{
+    text-align: right;
+    font-size: 1.7rem;
+}
+
+article.contact form div.field input,
+article.contact form div.field select,
+article.contact form div.field textarea{
+    height: 3rem;
+    border: 2px solid #695544;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+article.contact form div.field textarea{
+    height: 12rem;
+}
+
+div#confirm{
+    display: grid;
+    grid-template-columns: 90% 5%;
+    grid-column-gap: 5% ;
+    margin: 1rem 0;
+}
+
+div#confirm input{
+    text-align: left;
+    width: 2rem;
+}
+
+article.contact form input#submitButton{
+    width: 50%;
+    height: 3rem;
+    margin: 0 auto;
+}
+
 /*footer*/
 
 footer{
     background: #695544;
     padding: 1rem;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p{
@@ -251,6 +348,15 @@ footer p{
     article#reeks-article section.product div.product-preview img{
 
     }
+
+    article.contact section{
+        margin: 1rem;
+    }
+
+    article.contact form div.field{
+        grid-template-columns: 20% 80%;
+    }
+
 
 }
 
