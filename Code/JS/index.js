@@ -1,3 +1,11 @@
+achtergrondGroote();
+welkomBerichtHoogte();
+
+window.onresize = () => {
+    achtergrondGroote();
+    welkomBerichtHoogte();
+}
+
 function achtergrondGroote(){
     let pic = document.getElementById("achtergrond-afbeelding");
 
@@ -7,8 +15,12 @@ function achtergrondGroote(){
     pic.style.height = Math.max(totalY - offSetY - 100, 400) + "px";
 }
 
-achtergrondGroote();
+function welkomBerichtHoogte(){
+    let pic = document.getElementById("achtergrond-afbeelding");
+    let titel = pic.children.item(0);
 
-window.onresize = () => {
-    achtergrondGroote();
+    let top = pic.offsetTop;
+    let bot = pic.offsetHeight;
+
+    titel.style.top = ((bot/2) + top) + "px";
 }

@@ -44,10 +44,11 @@ header nav ul li a{
     font-size: 2.3rem;
     font-weight: bold;
     background: #c5dfa6;
+    border-radius: 3px;
 }
 
-header nav ul li a~a:hover{
-    background: #e3d4bd;
+header nav ul li~li a:hover{
+    background: #dec4aa;
     transition: background-color 500ms;
 }
 
@@ -78,6 +79,10 @@ header ul#langSwitch li a{
     font-size: 1.1rem;
 }
 
+header ul#langSwitch li a:hover{
+    background: #f5da2a;
+}
+
 header ul#langSwitch li:first-child a{
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
     border-radius: 5px 0 0 5px;
@@ -96,18 +101,11 @@ header ul#langSwitch li a#lang-selected{
     background: #f5a02a;
 }
 
-/*footer*/
-
-footer ul{
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 1rem;
-    font-size: 1.3rem;
-}
-
 /*home*/
+
+main.home{
+    background: #c5dfa6;
+}
 
 div#achtergrond-afbeelding{
     background-image: url("../Images/bird-on-tree.jpg");
@@ -135,8 +133,26 @@ article.home section{
     display: block;
     margin-bottom: 1.5rem;
     padding: 2.5rem 2rem;
-    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
-    background: #c5dfa6;
+}
+
+article.home section div.text{
+    margin: auto 1rem;
+    text-align: left;
+}
+
+article.home section div.text h3{
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+article.home section div.text p{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+article.home section img{
+    max-width: 90%;
+    margin: 2rem auto;
 }
 
 article.home section h3{
@@ -149,10 +165,14 @@ article.home section p{
 
 /*reeks*/
 
+main#reeks-main{
+    background: #dec4aa;
+}
+
 main article#reeks-article{
     padding: 0.3rem 0;
     background: #e3d4bd;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 main article#reeks-article section{
@@ -181,7 +201,11 @@ p.product-function{
     font-size: 2rem;
 }
 
-section.product div#showing-info{
+section.product#dummy{
+    display: none;
+}
+
+section.product#showing-info div{
     display: block;
     margin: 0.5rem 1rem;
 }
@@ -190,7 +214,7 @@ section.product div.product-info{
     display: none;
 }
 
-div#showing-info dl{
+section.product#showing-info div dl{
     list-style: none;
     display: grid;
     grid-template-columns: auto auto;
@@ -199,18 +223,41 @@ div#showing-info dl{
     font-size: 1.4rem;
 }
 
-div#showing-info dl dt{
-    text-align: end;
+section.product#showing-info div dl dt{
+    text-align: right;
 }
 
-div#showing-info dl dd{
-    text-align: start;
+section.product#showing-info div dl dd{
+    text-align: left;
+}
+
+article#reeks-article~aside{
+    padding: 2rem;
+    background: #dec4aa;
+}
+
+article#reeks-article~aside h3{
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+article#reeks-article~aside p{
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+article#reeks-article~aside a{
+    text-decoration: none;
+    color: maroon;
 }
 
 /*contact*/
+main.contact{
+    background: #ffffff;
+}
 
 article.contact{
-   margin: 1rem 5%;
+   margin: 1rem 5%;padding: 1rem 0 2rem 0;
 }
 
 article.contact h2, article.contact h3{
@@ -218,7 +265,7 @@ article.contact h2, article.contact h3{
 }
 
 article.contact section{
-    margin: 2rem 1rem;
+    margin: 4rem 1rem;
 }
 
 article.contact section p{
@@ -248,7 +295,7 @@ article.contact form{
 article.contact form div.field{
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-column-gap: 0.4rem ;
+    grid-column-gap: 1rem ;
     margin: 1rem 0;
 }
 
@@ -272,7 +319,7 @@ article.contact form div.field textarea{
 
 div#confirm{
     display: grid;
-    grid-template-columns: 90% 5%;
+    grid-template-columns: 70% 5%;
     grid-column-gap: 5% ;
     margin: 1rem 0;
 }
@@ -299,6 +346,15 @@ footer{
 
 footer p{
     font-size: 1rem;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+    font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 900px){
@@ -329,7 +385,7 @@ footer p{
     }
 
     main#reeks-main{
-        background: #c5dfa6;
+        background: #dec4aa;
     }
 
     article#reeks-article{
@@ -337,32 +393,50 @@ footer p{
         grid-template-columns: 50% 50%;
     }
 
-    article#reeks-article section.product{
-
+    article.home section.rechts{
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    article#reeks-article section.product div.product-preview{
-
+    article.home section.links{
+        display: flex;
+        flex-direction: row;
     }
 
-    article#reeks-article section.product div.product-preview img{
-
+    article.home section img{
+        max-width: 40%;
+        margin: auto 0;
     }
 
     article.contact section{
-        margin: 1rem;
+        margin: 3rem 1rem;
     }
 
     article.contact form div.field{
         grid-template-columns: 20% 80%;
     }
 
+    section.product#showing-info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        border: #e3d4bd solid 5px;
+    }
+
+    section.product#dummy{
+        display: block;
+    }
 
 }
 
 @media only screen and (min-width: 1500px){
     article#reeks-article{
         grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    section.product#showing-info{
+        width: 33%;
     }
 }
 
