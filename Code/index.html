@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <title>Flamingo</title>
     <link rel="stylesheet" href="CSS/styles.css">
-    <script src="JS/index.js"></script>
     <link rel="icon" type="image/png" href="Images/logo_mini.png">
 </head>
 <body>
 <header>
-    <h1>Flamingo Your pet's favorite brand</h1>
+    <ul id="langSwitch">
+        <li><a id="lang-selected" href="">NL</a></li>
+        <li><a href="">FR</a></li>
+        <li><a href="">EN</a></li>
+        <li><a href="">DE</a></li>
+    </ul>
+    <h1>Flamingo, We care about pets</h1>
     <nav>
         <ul>
-            <li><a href="index.html"><img src="Images/logo.png" alt="logo"></a></li>
+            <li><a href="index.html"><img src="Images/logo_transparent.png" alt="logo"></a></li>
             <li><a href="index.html">Home</a></li>
-            <li><a href="HTML/reeks.html">Product Reeks</a></li>
+            <li><a href="HTML/reeks.html">Producten</a></li>
             <li><a href="HTML/contact.html">Contact</a></li>
         </ul>
     </nav>
-    <!--
-    language buttons
-    -->
-    <ul class="langSwitch">
-        <li><a href="">nl</a></li>
-        <li><a href="">eng</a></li>
-    </ul>
 </header>
 <main>
-    <h2>Welkom bij Flamingo</h2>
-    <article>
+    <div id="achtergrond-afbeelding">
+        <h2>Welkom bij Flamingo</h2>
+    </div>
+    <article class="home">
         <section>
             <h3>We care about pets!</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid amet animi aperiam autem commodi
@@ -46,7 +46,12 @@
     </article>
 </main>
 <footer>
-    <p>&copy;Flamingo Pet Products nv</p>
+    <ul>
+        <li>info@flamingo.be</li>
+        <li>&copy;Flamingo Pet Products nv</li>
+        <li>+32 14 242 100</li>
+    </ul>
 </footer>
+<script src="JS/index.js"></script>
 </body>
 </html>

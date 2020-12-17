@@ -1,72 +1,368 @@
-body *{
-    display: block;
-    font-family: sans-serif;
+@font-face {
+    font-family: MuseoSans; src: url("../Fonts/MuseoSans_700.otf");
+    font-family: MyriadPro; src: url("../Fonts/MyriadPro.otf");
 }
 
-header {
-    margin: 10px 5px;
-    text-align: center;
-}
-
-header nav{
-    padding: 0 5px;
-}
-
-header nav ul, header ul{
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li, header ul li{
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: MyriadPro, sans-serif;
+}
+
+h1, h2, h3{
+    font-family: MuseoSans, sans-serif;
+}
+
+body{
+    text-align: center;
+    width: 100%;
+    display: block;
+    background: #dec4aa;
+}
+
+/*header*/
+
+header{
+    padding: 1rem;
+    background: #c5dfa6;
+}
+
+header h1{
+    display: none;
+}
+
+header nav ul{
+    list-style: none;
 }
 
 header nav ul li a{
     display: block;
-    background: white;
+    padding: 0.4rem;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2.3rem;
+    font-weight: bold;
+    background: #c5dfa6;
+}
+
+header nav ul li a~a:hover{
+    background: #e3d4bd;
+    transition: background-color 500ms;
+}
+
+header ul#langSwitch{
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: #f5a02a solid 1px;
+    border-radius: 5px;
+    width: 10rem;
+    height: 1.5rem;
+    right: 1.5rem;
+    top: 10px;
+}
+
+header ul#langSwitch li{
+    width: 100%;
+}
+
+header ul#langSwitch li a{
     text-decoration: none;
     color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
 }
 
-header nav ul li + li a{
-    background: lightpink;
-    padding: 5px 0;
-    transition: background-color 0.5s;
+header ul#langSwitch li:first-child a{
+    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
+    border-radius: 5px 0 0 5px;
 }
 
-header nav ul li + li a:hover{
-    background: deeppink;
+header ul#langSwitch li~li a{
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+header ul#langSwitch li:last-child a{
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 0 5px 5px 0;
+}
+
+header ul#langSwitch li a#lang-selected{
+    background: #f5a02a;
+}
+
+/*footer*/
+
+footer ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+}
+
+/*home*/
+
+div#achtergrond-afbeelding{
+    background-image: url("../Images/bird-on-tree.jpg");
+    height: 30rem;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+    margin-bottom: 2rem;
+}
+
+div#achtergrond-afbeelding h2{
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    width: 90%;
+    opacity: 1;
+    font-size: 3.5rem;
+    -webkit-text-stroke: 3px #000;
     color: white;
 }
 
-header ul li a{
-    text-decoration: none;
-    color: black;
+article.home section{
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 2.5rem 2rem;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
+    background: #c5dfa6;
 }
 
-header nav ul li a img{
-    max-width: 80%;
-    margin: 0 auto 0 auto;
+article.home section h3{
+    font-size: 2rem;
 }
 
-@media all and (min-width: 960px) {
+article.home section p{
+    font-size: 1.3rem;
+}
+
+/*reeks*/
+
+main article#reeks-article{
+    padding: 0.3rem 0;
+    background: #e3d4bd;
+    margin-bottom: 1rem;
+}
+
+main article#reeks-article section{
+    margin: 0.3rem;
+    border: #e3d4bd solid 3px;
+    border-radius: 15px;
+    background: #fff;
+}
+
+div.product-preview{
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+}
+
+img.product-image{
+    max-width: 70%;
+    max-height: 20rem;
+    margin-bottom: 1rem;
+}
+
+h3.product-name{
+    font-size: 3rem;
+}
+
+p.product-function{
+    font-size: 2rem;
+}
+
+section.product div#showing-info{
+    display: block;
+    margin: 0.5rem 1rem;
+}
+
+section.product div.product-info{
+    display: none;
+}
+
+div#showing-info dl{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0.8rem;
+    grid-row-gap: 0.5rem;
+    font-size: 1.4rem;
+}
+
+div#showing-info dl dt{
+    text-align: end;
+}
+
+div#showing-info dl dd{
+    text-align: start;
+}
+
+/*contact*/
+
+article.contact{
+   margin: 1rem 5%;
+}
+
+article.contact h2, article.contact h3{
+    margin: 1.3rem;
+}
+
+article.contact section{
+    margin: 2rem 1rem;
+}
+
+article.contact section p{
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+}
+
+article.contact dl{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 0.4rem;
+}
+
+article.contact dl dt{
+    text-align: right;
+}
+
+article.contact dl dd{
+    text-align: left;
+}
+
+article.contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+article.contact form div.field{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 0.4rem ;
+    margin: 1rem 0;
+}
+
+article.contact form div.field label{
+    text-align: right;
+    font-size: 1.7rem;
+}
+
+article.contact form div.field input,
+article.contact form div.field select,
+article.contact form div.field textarea{
+    height: 3rem;
+    border: 2px solid #695544;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+article.contact form div.field textarea{
+    height: 12rem;
+}
+
+div#confirm{
+    display: grid;
+    grid-template-columns: 90% 5%;
+    grid-column-gap: 5% ;
+    margin: 1rem 0;
+}
+
+div#confirm input{
+    text-align: left;
+    width: 2rem;
+}
+
+article.contact form input#submitButton{
+    width: 50%;
+    height: 3rem;
+    margin: 0 auto;
+}
+
+/*footer*/
+
+footer{
+    background: #695544;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 900px){
+
+    header nav{
+        height: 100%;
+    }
+
     header nav ul{
+        align-items: center;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
+        flex-wrap: nowrap;
+        justify-content: left;
+        list-style: none;
     }
 
     header nav ul li{
-        width: 100%;
+        padding-right: 1rem;
+    }
+
+    header nav ul li a{
+        font-size: 2rem;
+    }
+
+    header nav ul li a img{
         height: 100%;
     }
 
-    header nav ul li + li a{
-        padding: 10px 0;
-        height: 100%;
+    main#reeks-main{
+        background: #c5dfa6;
+    }
+
+    article#reeks-article{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    article#reeks-article section.product{
+
+    }
+
+    article#reeks-article section.product div.product-preview{
+
+    }
+
+    article#reeks-article section.product div.product-preview img{
+
+    }
+
+    article.contact section{
+        margin: 1rem;
+    }
+
+    article.contact form div.field{
+        grid-template-columns: 20% 80%;
+    }
+
+
+}
+
+@media only screen and (min-width: 1500px){
+    article#reeks-article{
+        grid-template-columns: 33.3% 33.3% 33.3%;
     }
 }
 

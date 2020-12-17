@@ -4,74 +4,102 @@
     <meta charset="UTF-8">
     <title>Flamingo - Contact</title>
     <link rel="stylesheet" href="../CSS/styles.css">
-    <script src="../JS/index.js"></script>
+    <script src="../JS/reeks.js"></script>
     <link rel="icon" type="image/png" href="../Images/logo_mini.png">
 </head>
 <body>
 <header>
-    <h1>Flamingo Your pet's favorite brand</h1>
+    <ul id="langSwitch">
+        <li><a id="lang-selected" href="">NL</a></li>
+        <li><a href="">FR</a></li>
+        <li><a href="">EN</a></li>
+        <li><a href="">DE</a></li>
+    </ul>
+    <h1>Flamingo, We care about pets!</h1>
     <nav>
         <ul>
-            <li><a href="../index.html"><img src="../Images/logo.png" alt="logo"></a></li>
+            <li><a href="../index.html"><img src="../Images/logo_transparent.png" alt="logo"></a></li>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="reeks.html">Product Reeks</a></li>
+            <li><a href="reeks.html">Producten</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <!--
-    language buttons
-    -->
-    <ul class="langSwitch">
-        <li><a href="">nl</a></li>
-        <li><a href="">eng</a></li>
-    </ul>
 </header>
 <main>
-    <h2>Constacteer ons</h2>
-    <article>
-        <section>
-            <h3>Contact informatie</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut corporis culpa dignissimos
-                eaque labore pariatur, perspiciatis praesentium soluta voluptas. Alias architecto assumenda aut commodi
-                consequuntur culpa debitis deleniti deserunt distinctio eaque est ex excepturi expedita in ipsum minus
-                modi molestias optio perferendis provident, quibusdam saepe temporibus tenetur totam voluptatibus!</p>
-            <p><span class="contact">Telefoon:</span> +32 14 24 21 00</p>
-            <p><span class="contact">Fax:</span> +32 14 22 52 99</p>
-            <p><span class="contact">Bureau:</span> Hagelberg 14, 2440 Geel, Belgium</p>
-            <p><span class="contact">Email:</span> info@flamingo.be</p>
-        </section>
-        <section>
-            <h3>Contact formulier</h3>
-            <form action="">
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="Naam"><br>
-                <label for="firstName">Voornaam:</label>
-                <input type="text" id="firstName" name="VoorNaam"><br>
-                <label for="email">email:</label>
-                <input type="email" id="email" name="email"><br>
+    <article class="contact">
+        <h2>Constacteer ons</h2>
+        <div>
+            <section>
+                <h3>Contact informatie</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut corporis culpa dignissimos
+                    eaque labore pariatur, perspiciatis praesentium soluta voluptas. Alias architecto assumenda aut commodi
+                    consequuntur culpa debitis deleniti deserunt distinctio eaque est ex excepturi expedita in ipsum minus
+                    modi molestias optio perferendis provident, quibusdam saepe temporibus tenetur totam voluptatibus!</p>
+                <dl>
+                    <dt>Telefoon:</dt>
+                    <dd>+32 14 24 21 00</dd>
 
-                <label for="gender">Geslacht:</label>
-                <select name="geslacht" id="gender">
-                    <option value="male">Man</option>
-                    <option value="female">Vrouw</option>
-                    <option value="other">Anders</option>
-                </select><br>
+                    <dt>Fax:</dt>
+                    <dd>+32 14 22 52 99</dd>
 
-                <label for="message">Wat wil je ons laten weten</label><br>
-                <textarea name="bericht" id="message" cols="30" rows="10"></textarea><br>
+                    <dt>Bureau:</dt>
+                    <dd>Hagelberg 14, 2440 Geel, Belgium</dd>
 
-                <label for="TOS">Ik accepteer dat Flamingo de ingevulde data kan behandelen<span
-                        class="red">*</span></label>
-                <input type="checkbox" id="TOS" name="Voorwaarden" value="Agree"><br>
+                    <dt>Email:</dt>
+                    <dd>info@flamingo.be</dd>
+                </dl>
+            </section>
+            <section>
+                <h3>Contact formulier</h3>
+                <form action="">
+                    <div class="field">
+                        <label for="name">Naam:</label>
+                        <input type="text" id="name" name="Naam">
+                    </div>
 
-                <input type="button" id="submitButton" name="Indienen" value="Indienen">
-            </form>
-        </section>
+                    <div class="field">
+                        <label for="firstName">Voornaam:</label>
+                        <input type="text" id="firstName" name="VoorNaam">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="field">
+                        <label for="gender">Geslacht:</label>
+                        <select name="geslacht" id="gender">
+                            <option value="male">Man</option>
+                            <option value="female">Vrouw</option>
+                            <option value="other">Anders</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Bericht:</label>
+                        <textarea name="bericht" id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="field" id="confirm">
+                        <label for="TOS">Ik accepteer dat Flamingo de ingevulde data kan behandelen<span
+                                class="red">*</span></label>
+                        <input type="checkbox" id="TOS" name="Voorwaarden" value="Agree">
+                    </div>
+
+                    <input type="button" id="submitButton" name="Indienen" value="Indienen">
+                </form>
+            </section>
+        </div>
     </article>
 
 </main>
 <footer>
-    <p>&copy;Flamingo Pet Products nv</p>
+    <ul>
+        <li>info@flamingo.be</li>
+        <li>&copy;Flamingo Pet Products nv</li>
+        <li>+32 14 242 100</li>
+    </ul>
 </footer>
 </body>
 </html>
