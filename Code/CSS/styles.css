@@ -130,7 +130,8 @@ div#achtergrond-afbeelding h2{
 }
 
 article.home{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 article.home section{
