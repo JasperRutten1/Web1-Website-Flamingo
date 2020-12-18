@@ -404,6 +404,10 @@ footer ul{
         grid-template-rows: auto;
     }
 
+    article.home section{
+        max-height: 1000px;
+    }
+
     article.home section.rechts{
         display: flex;
         flex-direction: row-reverse;
