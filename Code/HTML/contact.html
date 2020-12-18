@@ -30,20 +30,24 @@
         <h2>Contacteer ons</h2>
         <div>
             <section>
-                <h3>Contact formulier</h3>
+                <h3>Contactformulier</h3>
                 <form action="">
                     <div class="field">
-                        <label for="name">Naam:</label>
+                        <label for="name">Naam:*</label>
                         <input type="text" id="name" name="Naam">
                     </div>
 
                     <div class="field">
-                        <label for="firstName">Voornaam:</label>
+                        <label for="firstName">Voornaam:*</label>
                         <input type="text" id="firstName" name="VoorNaam">
+                    </div>
+                    <div class="field">
+                        <label for="phone">Telefoon:</label>
+                        <input type="text" id="phone" name="Telefoon">
                     </div>
 
                     <div class="field">
-                        <label for="email">email:</label>
+                        <label for="email">Email:*</label>
                         <input type="email" id="email" name="email">
                     </div>
 
@@ -57,22 +61,25 @@
                     </div>
 
                     <div class="field">
-                        <label for="message">Bericht:</label>
+                        <label for="message">Bericht:*</label>
                         <textarea name="bericht" id="message" cols="30" rows="10"></textarea>
                     </div>
 
                     <div class="field" id="confirm">
-                        <label for="TOS">Ik accepteer dat Flamingo de ingevulde data kan behandelen<span
-                                class="red">*</span></label>
                         <input type="checkbox" id="TOS" name="Voorwaarden" value="Agree">
+                        <label for="TOS">Ik accepteer dat Flamingo de ingevulde data kan gebruiken
+                            <span class="red">*</span></label>
                     </div>
 
                     <input type="button" id="submitButton" name="Indienen" value="Indienen">
                 </form>
+                <div id="response">
+
+                </div>
             </section>
             <section>
-                <h3>Contact informatie</h3>
-                <p>Je kan ons ook berijken aan de hand van volgende gegevens:</p>
+                <h3>Contactinformatie</h3>
+                <p>Je kan ons ook bereiken aan de hand van volgende gegevens:</p>
                 <dl>
                     <dt>Telefoon:</dt>
                     <dd>+32 14 24 21 00</dd>
@@ -83,7 +90,7 @@
                     <dt>Email:</dt>
                     <dd>info@flamingo.be</dd>
 
-                    <dt>Bureau:</dt>
+                    <dt>Hoofdkantoor:</dt>
                     <dd>Hagelberg 14, 2440 Geel, Belgium</dd>
 
                 </dl>
@@ -95,9 +102,10 @@
 <footer>
     <ul>
         <li>info@flamingo.be</li>
-        <li>&copy;Flamingo Pet Products nv</li>
+        <li>&copy;Flamingo Pet Products NV</li>
         <li>+32 14 242 100</li>
     </ul>
 </footer>
+<script src="../JS/contact.js"></script>
 </body>
 </html>
