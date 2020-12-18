@@ -34,14 +34,15 @@ header h1{
 
 header nav ul{
     list-style: none;
+    height: 100%;
 }
 
 header nav ul li a{
     display: block;
-    padding: 0.4rem;
+    padding: 1rem;
     text-decoration: none;
     color: #000000;
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     font-weight: bold;
     background: #c5dfa6;
     border-radius: 3px;
@@ -141,7 +142,6 @@ article.home section{
 }
 
 article.home section div.text{
-    height: 100%;
     margin: auto 1rem;
     text-align: left;
 }
@@ -286,16 +286,10 @@ article.contact section p{
 }
 
 article.contact dl{
+    margin-top: 1rem;
     display: grid;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 30% 70%;
     column-gap: 0.4rem;
-}
-
-article.contact dl dt{
-    text-align: right;
-}
-
-article.contact dl dd{
     text-align: left;
 }
 
@@ -313,13 +307,13 @@ article.contact form div.field{
 
 article.contact form div.field label{
     text-align: right;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 article.contact form div.field input,
 article.contact form div.field select,
 article.contact form div.field textarea{
-    height: 3rem;
+    height: 4rem;
     border: 2px solid #695544;
     border-radius: 3px;
     font-size: 1.2rem;
@@ -331,7 +325,7 @@ article.contact form div.field textarea{
 
 div#confirm{
     display: grid;
-    grid-template-columns: 5% 90%;
+    grid-template-columns: 30% 70%;
     grid-column-gap: 1rem;
     margin: 1rem 0;
 }
@@ -340,17 +334,51 @@ div#response{
     color: #ff0000;
 }
 
-div#confirm input{
+div#confirm label{
     text-align: left;
-    width: 2rem;
+}
+
+div#confirm input{
+    margin-left: 85%;
+    width: 1.5rem;
 }
 
 article.contact form input#submitButton{
-    width: 50%;
-    height: 4rem;
-    margin: 0 auto;
+    width: 70%;
+    height: 5rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    background: #c5dfa6;
+    font-size: 3rem;
 }
 
+div.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+div.contact-info ul{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+div.contact-info ul li{
+    margin: 0 1rem;
+}
+
+div.contact-info ul li a{
+    text-decoration: none;
+    color: maroon;
+}
+
+div.contact-info ul li a img{
+    height: 2rem;
+}
 /*footer*/
 
 footer{
@@ -388,12 +416,12 @@ footer ul{
         list-style: none;
     }
 
-    header nav ul li{
-        padding-right: 1rem;
-    }
-
     header nav ul li a{
         font-size: 2rem;
+    }
+
+    header nav ul li~li a{
+        padding: 2rem;
     }
 
     header nav ul li a img{
@@ -445,6 +473,21 @@ footer ul{
         display: block;
     }
 
+    div.contact-info{
+        flex-direction: row;
+    }
+
+    div.contact-info ul{
+        justify-content: space-around;
+    }
+
+    article.contact form div.field label{
+        font-size: 2.3rem;
+    }
+
+    article.contact form input#submitButton{
+        width: 50%;
+    }
 }
 
 @media only screen and (min-width: 1500px){
