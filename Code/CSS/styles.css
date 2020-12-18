@@ -136,6 +136,7 @@ article.home section{
 }
 
 article.home section div.text{
+    height: 100%;
     margin: auto 1rem;
     text-align: left;
 }
