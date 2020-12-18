@@ -451,7 +451,7 @@ footer ul{
     article.home section img{
         max-width: 40%;
         margin: auto 0;
-        max-height: 450px;
+        max-height: 40rem;
     }
 
     article.contact section{
