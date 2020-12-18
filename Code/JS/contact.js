@@ -7,12 +7,12 @@ document.getElementById("submitButton").addEventListener("click", (event) => {
     let confirm = document.getElementById("TOS");
 
     clearErrorMessages();
-    if(name.value.trim().length < 2) addErrorMessage("naam mag niet leeg zijn");
-    if(firstName.value.trim().length < 2) addErrorMessage("voornaam mag niet leeg zijn");
+    if(name.value.trim().length < 2) addErrorMessage("Naam mag niet leeg zijn");
+    if(firstName.value.trim().length < 2) addErrorMessage("Voornaam mag niet leeg zijn");
     if(email.value.trim().length < 3 || !email.value.includes("@")) addErrorMessage("Ongeldig Email adres")
-    if(message.value.trim().length < 10) addErrorMessage("berich moeten minstens 10 karakters zijn");
+    if(message.value.trim().length < 10) addErrorMessage("Bericht moet minstens 10 karakters zijn");
     console.log(confirm.value);
-    if(!(confirm.checked === true)) addErrorMessage("bevestig astublieft dat we u gegevens mogen gebruiken");
+    if(!(confirm.checked === true)) addErrorMessage("Bevestig astublieft dat we uw gegevens mogen gebruiken");
 })
 
 function addErrorMessage(message){
